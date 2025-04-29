@@ -52,10 +52,12 @@ The API allows clients (like a frontend application) to specify the desired prov
     ```
     **Important:** Add `.env` to your `.gitignore` file if using Git.
 
+
 6.  **Get the api keys from here**
-    xai -> https://console.x.ai/team/ba505bda-e336-48db-bf5b-0ea5724c953a/api-keys
-    gemini -> https://aistudio.google.com/apikey
-    openai -> https://platform.openai.com/api-keys
+*    xai -> https://console.x.ai/team/ba505bda-e336-48db-bf5b-0ea5724c953a/api-keys
+*    gemini -> https://aistudio.google.com/apikey
+*    openai -> https://platform.openai.com/api-keys
+
 
 7.  **Run the Server:**
     
