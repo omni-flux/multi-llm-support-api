@@ -24,9 +24,8 @@ The API allows clients (like a frontend application) to specify the desired prov
 
 ## Setup
 
-1.  **Clone or Download:** Get the project files.
+1.  **Clone the repo:** 
     ```bash
-    # If using Git
     # git clone https://github.com/omni-flux/multi-llm-support-api
     # cd multi-llm-support-api
     ```
@@ -37,7 +36,6 @@ The API allows clients (like a frontend application) to specify the desired prov
     ```
 
 3.  **Activate Virtual Environment:**
-    *   macOS/Linux: `source venv/bin/activate`
     *   Windows: `.\venv\Scripts\activate`
 
 4.  **Install Dependencies:**
@@ -60,13 +58,21 @@ The API allows clients (like a frontend application) to specify the desired prov
     openai -> https://platform.openai.com/api-keys
 
 7.  **Run the Server:**
+    
+    ```bash
+    python main.py
+    ```
+    or
     ```bash
     uvicorn main:app --reload
     ```
     The API will be available at `http://127.0.0.1:8000`.
 
-## API Endpoints
+### API Documentation
+Interactive API documentation (Swagger UI) is available at `/docs` 
+when the server is running (e.g., `http://127.0.0.1:8000/docs`).
 
+## API Endpoints
 ### 1. Root
 
 *   **URL:** `/`
@@ -159,6 +165,3 @@ The API allows clients (like a frontend application) to specify the desired prov
       "prompt": "An astronaut riding a bicycle on the moon, digital art"
     }
     ```
-### API Documentation
-
-Interactive API documentation (Swagger UI) is available at `/docs` when the server is running (e.g., `http://127.0.0.1:8000/docs`).
