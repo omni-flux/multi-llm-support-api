@@ -27,8 +27,8 @@ The API allows clients (like a frontend application) to specify the desired prov
 1.  **Clone or Download:** Get the project files.
     ```bash
     # If using Git
-    # git clone <your-repository-url>
-    # cd <repository-name>
+    # git clone https://github.com/omni-flux/multi-llm-support-api
+    # cd multi-llm-support-api
     ```
 
 2.  **Create Virtual Environment:**
@@ -42,12 +42,11 @@ The API allows clients (like a frontend application) to specify the desired prov
 
 4.  **Install Dependencies:**
     ```bash
-    pip install fastapi uvicorn python-dotenv openai google-generativeai httpx
+    pip install -r requirements.txt
     ```
-    *(Optional: Create a `requirements.txt` file with `pip freeze > requirements.txt` for easier dependency management)*
 
 5.  **Create `.env` File:**
-    Create a file named `.env` in the project root directory and add your API keys:
+    Create a file named `.env` in the project root directory and add your API keys(look at the dotenv-example):
     ```.env
     OPENAI_API_KEY=your_openai_api_key_here
     GOOGLE_API_KEY=your_google_gemini_api_key_here
@@ -55,7 +54,12 @@ The API allows clients (like a frontend application) to specify the desired prov
     ```
     **Important:** Add `.env` to your `.gitignore` file if using Git.
 
-6.  **Run the Server:**
+6.  **Get the api keys from here**
+    xai -> https://console.x.ai/team/ba505bda-e336-48db-bf5b-0ea5724c953a/api-keys
+    gemini -> https://aistudio.google.com/apikey
+    openai -> https://platform.openai.com/api-keys
+
+7.  **Run the Server:**
     ```bash
     uvicorn main:app --reload
     ```
@@ -81,7 +85,7 @@ The API allows clients (like a frontend application) to specify the desired prov
       "docs_url": "/docs"
     }
     ```
-
+    
 ### 2. Chat
 
 *   **URL:** `/chat`
@@ -155,7 +159,6 @@ The API allows clients (like a frontend application) to specify the desired prov
       "prompt": "An astronaut riding a bicycle on the moon, digital art"
     }
     ```
-
 ### API Documentation
 
 Interactive API documentation (Swagger UI) is available at `/docs` when the server is running (e.g., `http://127.0.0.1:8000/docs`).
